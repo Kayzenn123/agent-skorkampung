@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SKORKAMPUNG — Buletin Skor Antar-RT Edisi Final</title>
+<meta name="description" content="Buletin skor liga antar-RT: klasemen live, jadwal tanding, top skor, dan warta kampung. Catat hasil, bagikan lewat link. Ditulis warga, dibaca sekampung.">
+<meta name="theme-color" content="#1d2b2b">
+<link rel="canonical" href="https://kayzenn123.github.io/agent-skorkampung/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SKORKAMPUNG — Buletin Skor Antar-RT">
+<meta property="og:description" content="Klasemen live, jadwal tanding, top skor. Catat hasil lagamu, sebarkan kabarnya.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%231d2b2b'/%3E%3Crect x='4' y='2' width='8' height='12' fill='%23ffffff'/%3E%3Crect x='2' y='4' width='12' height='8' fill='%23ffffff'/%3E%3Crect x='6' y='6' width='4' height='4' fill='%23ff5d8f'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/emilys-candy-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#koran">Lompat ke koran</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="masthead" id="atas">
+  <div class="marquee band-a" aria-hidden="true"><div class="mtrack"><span>ELANG MALAM 2–1 MACAN KIDUL ✦ KANCIL FC 3–2 NAGA BONAR ✦ DADANG CETAK BRACE ✦ </span><span>ELANG MALAM 2–1 MACAN KIDUL ✦ KANCIL FC 3–2 NAGA BONAR ✦ DADANG CETAK BRACE ✦ </span></div></div>
+  <div class="marquee band-b" aria-hidden="true"><div class="mtrack"><span>DERBY LOR–KIDUL PEKAN DEPAN ✦ TIKET KARCIS LUDES ✦ WASIT KARMAN TANPA VAR ✦ </span><span>DERBY LOR–KIDUL PEKAN DEPAN ✦ TIKET KARCIS LUDES ✦ WASIT KARMAN TANPA VAR ✦ </span></div></div>
+
+  <p class="kicker">BULETIN WARGA · TERBIT SETIAP ADA GOL · <span class="cap-contoh">DATA CONTOH</span></p>
+  <h1 class="masthead-title" data-split>SKOR<br>KAMPUNG</h1>
+  <p class="subhead">Liga antar-RT musim hujan 2026 — klasemen, jadwal, top skor, dan warta. Ditulis warga, dibaca sekampung.</p>
+  <div class="masthead-cta">
+    <a class="btn btn-pink" href="#koran">BUKA KORANNYA ↓</a>
+    <button class="btn btn-ghost" id="motionToggle" aria-pressed="true">GERAK: NYALA</button>
+    <button class="btn btn-ghost" id="marqueeToggle" aria-pressed="true">TEKS BERJALAN: NYALA</button>
+  </div>
+  <p class="byline">Redaktur: <span class="sig">Bang Jack</span> · Ilustrasi: tinta &amp; piksel</p>
+  <svg class="tear" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 L0,22 L40,28 L80,18 L120,26 L160,16 L200,24 L240,14 L280,22 L320,12 L360,20 L400,10 L440,18 L480,8 L520,16 L560,6 L600,14 L640,4 L680,12 L720,2 L760,10 L800,0 L840,8 L880,4 L920,12 L960,6 L1000,14 L1040,8 L1080,16 L1120,10 L1160,18 L1200,12 L1200,40 Z"/></svg>
+</header>
+
+<main>
+<section id="koran" aria-label="Edisi koran Skorkampung">
+  <div class="hwrap" id="hwrap">
+    <div class="hsticky">
+      <div class="htrack" id="htrack">
+
+        <article class="panel" id="panel-klasmen" aria-labelledby="h-klasmen" tabindex="-1">
+          <div class="panel-inner">
+            <p class="hal">HAL. 1 / 4</p>
+            <h2 id="h-klasmen" data-split>KLASEMEN SEMENTARA</h2>
+            <p class="lede">Delapan RT, satu trofi kaleng. Klik judul kolom untuk mengurutkan. <span class="cap-contoh">data contoh</span></p>
+            <div class="tablewrap">
+              <table id="klasmen">
+                <caption class="sr">Klasemen liga antar-RT</caption>
+                <thead><tr>
+                  <th scope="col">#</th><th scope="col" data-sort="name">TIM</th><th scope="col" data-sort="p">M</th><th scope="col" data-sort="w">MN</th><th scope="col" data-sort="d">S</th><th scope="col" data-sort="l">K</th><th scope="col" data-sort="gf">GM</th><th scope="col" data-sort="ga">GK</th><th scope="col" data-sort="gd">+/−</th><th scope="col" data-sort="pts">POIN</th>
+                </tr></thead>
+                <tbody id="klasmenBody"></tbody>
+              </table>
+            </div>
+            <p class="footnote">M = main · MN = menang · S = seri · K = kalah · GM/GK = gol memasukkan/kemasukkan</p>
+
+            <h3 class="form-title">CATAT HASIL LAGA</h3>
+            <form id="formHasil" novalidate>
+              <div class="frow">
+                <label>Tim A <select id="timA" required></select></label>
+                <label>Skor <input id="skorA" type="number" inputmode="numeric" min="0" max="30" required placeholder="0"></label>
+              </div>
+              <div class="frow">
+                <label>Tim B <select id="timB" required></select></label>
+                <label>Skor <input id="skorB" type="number" inputmode="numeric" min="0" max="30" required placeholder="0"></label>
+              </div>
+              <label class="full">Pencetak gol <span class="hint">(opsional, format: Dadang 2, Udin 1)</span>
+                <input id="gol" type="text" maxlength="120" placeholder="cth: Dadang 2, Jajang 1">
+              </label>
+              <p class="form-error" id="formError" role="alert" hidden></p>
+              <div class="frow btns">
+                <button type="submit" class="btn btn-pink">CATAT GOLNYA!</button>
+                <button type="button" class="btn btn-ghost" id="resetData">RESET CONTOH</button>
+              </div>
+            </form>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-jadwal" aria-labelledby="h-jadwal" tabindex="-1">
+          <div class="panel-inner">
+            <p class="hal">HAL. 2 / 4</p>
+            <h2 id="h-jadwal" data-split>JADWAL TANDING</h2>
+            <div class="countdown" role="timer" aria-label="Hitung mundur laga berikutnya">
+              <span class="cd-label"><span class="px px-clock sm" aria-hidden="true"></span> Laga berikutnya</span>
+              <strong id="cdMatch">—</strong>
+              <span class="cd-time" id="cdTime">—</span>
+            </div>
+            <div class="filterbar" role="group" aria-label="Saring jadwal">
+              <button class="chip on" data-filter="all">SEMUA</button>
+              <button class="chip" data-filter="up">MENDATANG</button>
+              <button class="chip" data-filter="done">SELESAI</button>
+            </div>
+            <ul class="fixture-list" id="fixtureList"></ul>
+            <p class="empty" id="fixtureEmpty" hidden>Belum ada laga di saringan ini, Bos. Peluitnya belum ditiup.</p>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-warta" aria-labelledby="h-warta" tabindex="-1">
+          <div class="panel-inner cols2">
+            <div>
+              <p class="hal">HAL. 3 / 4</p>
+              <h2 id="h-warta" data-split>TOP SKOR</h2>
+              <ol class="topskor" id="topskor"></ol>
+              <p class="empty" id="topskorEmpty" hidden>Belum ada yang nyekor, Bos. Gawangnya masih perawan.</p>
+            </div>
+            <div>
+              <h2 data-split>WARTA KAMPUNG</h2>
+              <div class="news" id="news"></div>
+              <h3 class="form-title">MOMEN LAPANGAN <span class="hint">— geser!</span></h3>
+              <div class="strip" id="strip" tabindex="0" role="region" aria-label="Galeri momen, bisa digeser">
+                <figure class="shot s1"><span class="px-ball" aria-hidden="true"></span><figcaption>Gol salto Dadang</figcaption></figure>
+                <figure class="shot s2"><span class="px-trophy" aria-hidden="true"></span><figcaption>Trofi kaleng idaman</figcaption></figure>
+                <figure class="shot s3"><span class="px-whistle" aria-hidden="true"></span><figcaption>Peluit Karman</figcaption></figure>
+                <figure class="shot s4"><span class="px-goal" aria-hidden="true"></span><figcaption>Gawang dicat ulang</figcaption></figure>
+                <figure class="shot s5"><span class="px-mega" aria-hidden="true"></span><figcaption>Sorak tribun bambu</figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-cetak" aria-labelledby="h-cetak" tabindex="-1">
+          <div class="panel-inner">
+            <p class="hal">HAL. 4 / 4</p>
+            <h2 id="h-cetak" data-split>CETAK EDISI</h2>
+            <p class="lede">Bawa kabar gembira ini ke grup WA. Satu edisi, sejuta gosip.</p>
+            <div class="export-grid">
+              <button class="btn btn-pink" id="dlJson"><span class="px px-dl sm" aria-hidden="true"></span> UNDUH JSON</button>
+              <button class="btn btn-orange" id="dlCsv"><span class="px px-dl sm" aria-hidden="true"></span> UNDUH CSV</button>
+              <button class="btn btn-ghost" id="copyWa"><span class="px px-copy sm" aria-hidden="true"></span> SALIN RINGKASAN WA</button>
+              <button class="btn btn-ghost" id="copyLink"><span class="px px-link sm" aria-hidden="true"></span> SALIN LINK EDISI</button>
+            </div>
+            <p class="form-error" id="exportMsg" role="status" hidden></p>
+            <h3 class="form-title">REDAKSI</h3>
+            <dl class="redaksi">
+              <div><dt>Pemimpin redaksi</dt><dd>Bang Jack</dd></div>
+              <div><dt>Tinta</dt><dd>Pink sorak &amp; oranye lampu</dd></div>
+              <div><dt>Lapangan</dt><dd>Balai Warga, Jl. Kenanga RT 05</dd></div>
+              <div><dt>Wasit</dt><dd>Karman, Slamet, Paijo, Dullah</dd></div>
+            </dl>
+            <p class="footnote">Seluruh nama tim, pemain, skor, dan jadwal di edisi ini adalah <strong>data contoh</strong> untuk demo. Skor sungguhan? Catat sendiri pakai formulir di HAL. 1.</p>
+            <a class="btn btn-ghost" href="#atas">↑ KEMBALI KE SAMPUL</a>
+          </div>
+        </article>
+
+      </div>
+      <nav class="pagenav" aria-label="Navigasi halaman koran">
+        <button id="prevPage" aria-label="Halaman sebelumnya"><span class="px px-al" aria-hidden="true"></span></button>
+        <span id="pageInd" aria-live="polite">HAL. 1 / 4</span>
+        <button id="nextPage" aria-label="Halaman berikutnya"><span class="px px-ar" aria-hidden="true"></span></button>
+      </nav>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>SKORKAMPUNG</strong> · Buletin warga · Hari 22/30 · <span class="sig">Bang Jack</span></p>
+  <p class="footnote">Dibangun tanpa dependency JS · 2 tinta · 0 gambar raster · <span class="cap-contoh">data contoh</span></p>
+</footer>
+
+<div class="gool" id="gool" aria-hidden="true">GOOOL!</div>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+<div id="live" class="sr" aria-live="polite"></div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
